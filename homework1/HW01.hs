@@ -14,7 +14,12 @@ dropLastDigit a = read $ "0" ++ (init $ (show a))
 -- Exercise 2 -----------------------------------------
 
 toRevDigits :: Integer -> [Integer]
-toRevDigits a = [read $ i:[] | i <- (show a)]
+toRevDigits a
+    | a <= 0    = []
+    | otherwise =  lastDigit a : (toRevDigits (dropLastDigit a))
+
+toDigits :: Integer -> [Integer]
+toDigits n = reverse (toRevDigits n)
 
 -- Exercise 3 -----------------------------------------
 
@@ -26,14 +31,14 @@ doubleEveryOther a = [ if (snd i) `mod` 2 == 0 then 2 * fst(i) else fst i  | i <
 
 -- Calculate the sum of all the digits in every Integer.
 sumDigits :: [Integer] -> Integer
-sumDigits = undefined
+sumDigits = foldr (\ x y -> y + (sum $ toDigits x) ) 0
 
 
 -- Exercise 5 -----------------------------------------
 
 -- Validate a credit card number using the above functions.
 luhn :: Integer -> Bool
-luhn = undefined
+luhn = (\x -> x `mod` 10 == 0) . sumDigits . doubleEveryOther . toRevDigits
 
 -- Exercise 6 -----------------------------------------
 
