@@ -23,23 +23,32 @@ colors = [Red, Green, Blue, Yellow, Orange, Purple]
 
 -- Get the number of exact matches between the actual code and the guess
 exactMatches :: Code -> Code -> Int
-exactMatches = undefined
+exactMatches [] _ = 0
+exactMatches _ [] = 0
+exactMatches (x: xs) (x': xs') = (if x == x' then 1 else 0) + (exactMatches xs xs')
 
 -- Exercise 2 -----------------------------------------
+append :: [Int] -> [Int] -> [Int]
+append [] _ = []
+append _ [] = []
+append (x: xs) (x' : xs') = (x + x') : (append xs xs')
+
 
 -- For each peg in xs, count how many times is occurs in ys
 countColors :: Code -> [Int]
-countColors = undefined
+countColors [] = [0, 0, 0, 0, 0, 0]
+countColors (x: xs') = [if x == color then 1 else 0 | color <- colors] `append` (countColors xs')
 
 -- Count number of matches between the actual code and the guess
 matches :: Code -> Code -> Int
-matches = undefined
+-- matches a b = listEqual (countColors a) (countColors b)
+matches x y = sum([if (a /= 0) && (b /= 0) then 1 else 0 | (a, b) <- zip (countColors x) (countColors y)])
 
 -- Exercise 3 -----------------------------------------
 
 -- Construct a Move from a guess given the actual code
 getMove :: Code -> Code -> Move
-getMove = undefined
+getMove a b = Move b (exactMatches a b) (matches a b)
 
 -- Exercise 4 -----------------------------------------
 
