@@ -21,7 +21,7 @@ Best way to install Haskell https://www.stackage.org/install#mac-os-x
 
 Expression (Let and where)
 
-Haskell about experssion rather statement in impretaive programming langauages. 
+Haskell about experssion rather statement in imperative programming languages.
 
 Collection & String 
 
