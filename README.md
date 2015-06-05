@@ -11,8 +11,8 @@ https://gitlab.com/lambda-now/HaskellWeb/blob/HaskellWeb/README.md
 
 Current Haskell Version
 
-* 7.10.x
-* 7.8.x
+* 7.10.x https://downloads.haskell.org/~ghc/7.10.1/docs/html/users_guide/release-7-10-1.html
+* 7.8.x https://downloads.haskell.org/~ghc/7.8.4/docs/html/users_guide/release-7-8-1.html
 
 Best way to install Haskell https://www.stackage.org/install#mac-os-x
 
