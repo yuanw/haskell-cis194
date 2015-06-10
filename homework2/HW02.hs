@@ -53,17 +53,17 @@ getMove a b = Move b (exactMatches a b) (matches a b)
 -- Exercise 4 -----------------------------------------
 
 isConsistent :: Move -> Code -> Bool
-isConsistent = undefined
+isConsistent (Move a exactM m) b = (exactM == (exactMatches b a)) && (m == (matches b a))
 
 -- Exercise 5 -----------------------------------------
 
 filterCodes :: Move -> [Code] -> [Code]
-filterCodes = undefined
-
+filterCodes m codes = [code <- codes, isConsistent m c]
 -- Exercise 6 -----------------------------------------
 
 allCodes :: Int -> [Code]
-allCodes = undefined
+allCodes 0 = []
+allCodes 1 = [Red, Green, Blue, Yellow, Orange, Purple]
 
 -- Exercise 7 -----------------------------------------
 

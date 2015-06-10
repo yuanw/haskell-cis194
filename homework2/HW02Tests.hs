@@ -43,7 +43,7 @@ ex3Tests = [ testF2 "getMove test" getMove
 
 ex4Tests :: [Test]
 ex4Tests = [ testF2 "isConsistent test" isConsistent
-             [ (Move [Red, Red, Blue, Green] 1 1, [Red, Blue, Yellow, Purple],
+             [ (Move [Red, Red, Orange, Green] 1 1, [Red, Blue, Yellow, Purple],
                True)
              , (Move [Red, Red, Blue, Green] 1 1, [Red, Blue, Red, Purple],
                False)
