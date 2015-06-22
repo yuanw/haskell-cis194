@@ -4,6 +4,7 @@ Courses:
 * http://www.scs.stanford.edu/14sp-cs240h/slides/
 * http://cmsc-22311.cs.uchicago.edu/2015/
 * http://www.seas.upenn.edu/~cis194/
+* http://www.seas.upenn.edu/~cis552/schedule.html
 
 http://dev.stephendiehl.com/hask/#basics
 
