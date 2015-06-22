@@ -37,3 +37,5 @@ Cabal sandbox http://coldwa.st/e/blog/2013-08-20-Cabal-sandbox.html
 
 
 Web Snap book
+
+Style Guide http://www.seas.upenn.edu/~cis552/styleguide.html
